@@ -53,9 +53,18 @@
     @apply border-border;
   }
   body {
-    @apply min-h-screen bg-background text-foreground antialiased;
-    /* font-feature-settings: "rlig" 1, "calt" 1; */
+    @apply bg-background text-foreground antialiased;
     font-synthesis-weight: none;
     text-rendering: optimizeLegibility;
+  }
+}
+
+@layer utilities {
+  .animated-underline {
+    @apply relative
+  }
+  
+  .animated-underline:before {
+    @apply content-[""] w-full h-[1px] pointer-events-none bg-current absolute top-full left-0 origin-top-right scale-0 hover:scale-100 hover:origin-top-left transition-transform duration-300
   }
 }
