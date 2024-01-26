@@ -18,7 +18,6 @@ const mainNavItems = [
 ];
 
 export function MainNavbar() {
-  const a = 5;
   return (
     <nav className="flex items-center gap-10">
       {mainNavItems.map((item) => (
