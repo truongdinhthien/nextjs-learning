@@ -1,4 +1,5 @@
-import { Button } from '@/components/ui/button';
+import { buttonVariants } from '@/components/ui/button';
+import { cn } from '@/libs/utils';
 import Link from 'next/link';
 
 export default function Home() {
@@ -18,7 +19,9 @@ export default function Home() {
             Stay updated by following the GitHub repository
           </p>
           <div className="flex flex-col items-center gap-4">
-            <Button className="w-40">Discover now</Button>
+            <Link href="/login" className={cn(buttonVariants(), 'w-40')}>
+              Discover now
+            </Link>
             <Link
               href="https://github.com/truongdinhthien/nextjs-learning"
               target="_blank"

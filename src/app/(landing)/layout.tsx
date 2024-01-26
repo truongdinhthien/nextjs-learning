@@ -20,7 +20,7 @@ export default function Layout({ children }:LayoutProps) {
           </div>
         </div>
       </header>
-      <main>{children}</main>
+      <main className="flex-1 basis-0">{children}</main>
     </div>
   );
 }
