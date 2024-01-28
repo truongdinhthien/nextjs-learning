@@ -1,6 +1,6 @@
 import { Icons } from '@/components/icons';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { UserLoginForm } from './_components/user-login-form';
 
 function LoginPage() {
   return (
@@ -10,10 +10,7 @@ function LoginPage() {
           <h1 className="text-3xl font-semibold mb-2">Hey again</h1>
           <p className="text-sm text-muted-foreground mb-4">Unlock the doors to your account with a secure login</p>
           <div className="space-y-4">
-            <form className="flex flex-col gap-2">
-              <Input placeholder="Email" />
-              <Button>Log in with email</Button>
-            </form>
+            <UserLoginForm />
             <div className="flex items-center">
               <div className="bg-border flex-grow-1 h-[1px] w-full" />
               <span className="px-3 text-muted-foreground text-sm flex-shrink-0">Or continue with</span>
