@@ -3,14 +3,15 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { signIn } from 'next-auth/react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
+import { useRouter } from 'next/navigation';
 
 export const userLoginSchema = z.object({
   email: z.string().email(),
   password: z.string(),
 });
-
 type FormData = z.infer<typeof userLoginSchema>;
 
 export function UserLoginForm() {
@@ -23,11 +24,25 @@ export function UserLoginForm() {
     // mode: 'onSubmit',
   });
 
+  const router = useRouter();
+
   // TODO: Handle validation on input
   console.log(errors);
 
   const onSubmit = async (data: FormData) => {
-    // TODO: Handle submit latter
+    try {
+      const response = await signIn('credentials', {
+        ...data,
+        redirect: false,
+      });
+      if (response?.ok) {
+        router.replace('/protect');
+      } else {
+        alert('error');
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
