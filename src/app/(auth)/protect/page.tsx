@@ -1,8 +1,11 @@
-import React from 'react';
+import { LogoutButton } from './_logout-button';
 
 function ProtectedPage() {
   return (
-    <div>ProtectedPage</div>
+    <div>
+      ProtectedPage
+      <LogoutButton />
+    </div>
   );
 }
 
