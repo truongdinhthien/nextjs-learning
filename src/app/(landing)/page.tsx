@@ -2,6 +2,7 @@ import Link from "next/link"
 
 import { cn } from "@/lib/utils"
 
+import { Badge } from "@/components/ui/badge"
 import { buttonVariants } from "@/components/ui/button"
 
 export default function Home() {
@@ -9,9 +10,9 @@ export default function Home() {
     <section id="hero" className="min-h-[600px] pb-16 pt-20">
       <div className="container">
         <div className="flex flex-col items-center text-center">
-          <span className="mb-6 rounded-full bg-muted px-3 py-1.5 text-xs font-semibold">
+          <Badge className="mb-6" variant="secondary">
             Welcome to NextForm 👋
-          </span>
+          </Badge>
           <h1 className="mb-4 max-w-[60rem] text-6xl font-extrabold leading-tight tracking-tight text-primary">
             An demo app built using latest Next.js framework version
           </h1>
