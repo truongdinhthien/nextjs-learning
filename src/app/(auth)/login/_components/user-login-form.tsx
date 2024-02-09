@@ -45,8 +45,17 @@ export function UserLoginForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-2">
-      <Input placeholder="Email" {...register("email")} />
-      <Input type="password" placeholder="Password" {...register("password")} />
+      <Input
+        danger={!!errors?.email}
+        placeholder="Email"
+        {...register("email")}
+      />
+      <Input
+        danger={!!errors?.password}
+        type="password"
+        placeholder="Password"
+        {...register("password")}
+      />
       <Button type="submit">Log in with email</Button>
     </form>
   )
