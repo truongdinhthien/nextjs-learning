@@ -1,6 +1,8 @@
-import { buttonVariants } from '@/components/ui/button';
-import Link from 'next/link';
-import { cn } from '@/lib/utils';
+import Link from "next/link"
+
+import { cn } from "@/lib/utils"
+
+import { buttonVariants } from "@/components/ui/button"
 
 export default function Home() {
   return (
@@ -14,12 +16,13 @@ export default function Home() {
             An demo app built using latest Next.js framework version
           </h1>
           <p className="mb-8 text-lg text-primary/60">
-            I&apos;m excited to spread the good vibes of using Next.js server components
+            I&apos;m excited to spread the good vibes of using Next.js server
+            components
             <br />
             Stay updated by following the GitHub repository
           </p>
           <div className="flex flex-col items-center gap-4">
-            <Link href="/login" className={cn(buttonVariants(), 'w-40')}>
+            <Link href="/login" className={cn(buttonVariants(), "w-40")}>
               Discover now
             </Link>
             <Link
@@ -33,5 +36,5 @@ export default function Home() {
         </div>
       </div>
     </section>
-  );
+  )
 }

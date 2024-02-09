@@ -20,5 +20,3 @@ export function LogoutButton() {
     </Button>
   )
 }
-
-export default null
