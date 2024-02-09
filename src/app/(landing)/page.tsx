@@ -16,7 +16,7 @@ export default function Home() {
           <h1 className="mb-4 max-w-[60rem] text-6xl font-extrabold leading-tight tracking-tight text-primary">
             An demo app built using latest Next.js framework version
           </h1>
-          <p className="mb-8 text-lg text-primary/60">
+          <p className="mb-8 text-lg text-muted-foreground">
             I&apos;m excited to spread the good vibes of using Next.js server
             components
             <br />

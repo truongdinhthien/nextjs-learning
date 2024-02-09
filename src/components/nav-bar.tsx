@@ -24,7 +24,7 @@ export function MainNavbar() {
         <Link
           key={item.label}
           href={item.href}
-          className="animated-underline text-sm font-medium text-foreground/60 transition-colors hover:text-foreground/80"
+          className="animated-underline text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
         >
           {item.label}
         </Link>
