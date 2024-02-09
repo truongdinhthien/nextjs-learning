@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 
 import { Icons } from "@/components/icons"
 
-import { UserLoginForm } from "./_components/user-login-form"
+import { UserRegisterForm } from "./_components/user-register-form"
 
 function LoginPage() {
   return (
@@ -12,17 +12,17 @@ function LoginPage() {
       <div className="container max-w-[420px]">
         <div className="flex flex-col">
           <h1 className="mb-2 text-2xl font-semibold tracking-tight">
-            Hey again
+            Create an account
           </h1>
           <p className="mb-4 text-sm text-muted-foreground">
-            Unlock the doors to your account with a secure login
+            Enter your email below to create your account
           </p>
           <div className="space-y-4">
-            <UserLoginForm />
+            <UserRegisterForm />
             <div className="flex items-center">
               <div className="grow-1 h-[1px] w-full bg-border" />
               <span className="shrink-0 px-3 text-sm text-muted-foreground">
-                Or continue with
+                Or create with
               </span>
               <div className="grow-1 h-[1px] w-full bg-border" />
             </div>
@@ -38,10 +38,10 @@ function LoginPage() {
             </div>
           </div>
           <Link
-            href="/register"
+            href="/login"
             className="animated-underline mt-4 self-center text-sm text-muted-foreground transition-colors hover:text-primary"
           >
-            Don&apos;t have account yet? Sign Up
+            Back to login
           </Link>
         </div>
       </div>
