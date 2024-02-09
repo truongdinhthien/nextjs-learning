@@ -10,8 +10,8 @@ export default function Layout({ children }: LayoutProps) {
       <header className="relative z-10 h-16 py-4">
         <div className="container">
           <div className="flex items-center justify-between gap-4">
-            <Link href="/" className="text-2xl font-semibold text-foreground">
-              nextform.
+            <Link href="/" className="text-2xl font-bold tracking-tight">
+              NextForm
             </Link>
             <MainNavbar />
           </div>
