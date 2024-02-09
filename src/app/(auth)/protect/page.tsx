@@ -1,4 +1,4 @@
-import { LogoutButton } from './_logout-button';
+import { LogoutButton } from "./_logout-button"
 
 function ProtectedPage() {
   return (
@@ -6,7 +6,7 @@ function ProtectedPage() {
       ProtectedPage
       <LogoutButton />
     </div>
-  );
+  )
 }
 
-export default ProtectedPage;
+export default ProtectedPage

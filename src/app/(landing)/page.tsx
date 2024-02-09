@@ -1,19 +1,19 @@
 import { buttonVariants } from '@/components/ui/button';
-import { cn } from '@/libs/utils';
 import Link from 'next/link';
+import { cn } from '@/lib/utils';
 
 export default function Home() {
   return (
-    <section id="hero" className="pt-20 pb-16 min-h-[600px]">
+    <section id="hero" className="min-h-[600px] pb-16 pt-20">
       <div className="container">
         <div className="flex flex-col items-center text-center">
-          <span className="rounded-full bg-muted font-semibold text-xs px-3 py-1.5 mb-6">
+          <span className="mb-6 rounded-full bg-muted px-3 py-1.5 text-xs font-semibold">
             Welcome to NextForm 👋
           </span>
-          <h1 className="text-6xl leading-tight tracking-tight font-extrabold text-primary max-w-[60rem] mb-4">
+          <h1 className="mb-4 max-w-[60rem] text-6xl font-extrabold leading-tight tracking-tight text-primary">
             An demo app built using latest Next.js framework version
           </h1>
-          <p className="text-primary/60 mb-8 text-lg">
+          <p className="mb-8 text-lg text-primary/60">
             I&apos;m excited to spread the good vibes of using Next.js server components
             <br />
             Stay updated by following the GitHub repository
@@ -25,7 +25,7 @@ export default function Home() {
             <Link
               href="https://github.com/truongdinhthien/nextjs-learning"
               target="_blank"
-              className="inline text-sm animated-underline"
+              className="animated-underline inline text-sm"
             >
               Follow on GitHub
             </Link>

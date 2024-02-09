@@ -1,12 +1,22 @@
 {
-  "extends": ["next/core-web-vitals", "airbnb", "airbnb-typescript", "plugin:react/jsx-runtime"],
+  "extends": [
+    "next/core-web-vitals",
+    "prettier",
+    "plugin:tailwindcss/recommended"
+  ],
+  "plugins": ["tailwindcss", "prettier"],
   "parserOptions": {
     "project": "./tsconfig.json"
   },
+  "settings": {
+    "tailwindcss": {
+      "callees": ["cn", "cva"],
+      "config": "tailwind.config.ts"
+    }
+  },
   "rules": {
-    "no-unused-vars": 1,
-    "@typescript-eslint/no-unused-vars": 1,
-    "react/jsx-props-no-spreading": "off",
-    "react/prop-types": "off"
+    "prettier/prettier": ["error"],
+    "tailwindcss/no-custom-classname": "off",
+    "tailwindcss/classnames-order": "error"
   }
 }

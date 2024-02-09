@@ -1,21 +1,21 @@
-'use client';
+"use client"
 
-import Link from 'next/link';
+import Link from "next/link"
 
 const mainNavItems = [
   {
-    label: 'Product',
-    href: '/',
+    label: "Product",
+    href: "/",
   },
   {
-    label: 'Features',
-    href: '/',
+    label: "Features",
+    href: "/",
   },
   {
-    label: 'Blog',
-    href: '/',
+    label: "Blog",
+    href: "/",
   },
-];
+]
 
 export function MainNavbar() {
   return (
@@ -24,13 +24,11 @@ export function MainNavbar() {
         <Link
           key={item.label}
           href={item.href}
-          className="text-sm font-medium text-foreground/60 hover:text-foreground/80 transition-colors animated-underline"
+          className="animated-underline text-sm font-medium text-foreground/60 transition-colors hover:text-foreground/80"
         >
           {item.label}
         </Link>
       ))}
     </nav>
-  );
+  )
 }
-
-export default null;
